@@ -1,0 +1,620 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-one: "Alata", sans-serif;
+    --font-two: "Josefin Sans", sans-serif;
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Dark-Gray: hsl(0, 0%, 55%);
+    --Very-Dark-Gray: hsl(0, 0%, 41%);
+
+}
+
+body {
+    background-color: var(--White);
+    font-family: "Josefin Sans", serif;
+    width: 100vw;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+}
+
+.top {
+    background-image: url(./images/desktop/image-hero.jpg);
+    height: 60vh;
+    background-position: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+}
+
+.nav ul ol {
+    list-style: none;
+    padding: 0;
+}
+
+.nav ul ol a {
+    text-decoration: none;
+    color: var(--White);
+    font-family: var(--font-one);
+    position: relative;
+}
+
+.nav ul ol a::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    bottom: -50%;
+    height: 2px;
+    background-color: var(--White);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav ul ol a:hover::after {
+    transform: scaleX(1);
+}
+
+.main {
+    font-family: var(--font-two);
+    color: var(--White);
+    font-weight: 400;
+    margin-top: 10%;
+    width: 60%;
+    border: 3px solid white;
+    align-self: flex-start;
+    margin-left: 10%;
+}
+
+.main h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    padding: 20px;
+    padding-left: 25px;
+    text-transform: uppercase;
+}
+
+.mid {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    margin-left: 0;
+    width: 100%;
+}
+
+
+
+.mid-img {
+    position: relative;
+    width: 70%;
+}
+
+.mid-img::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 70%;
+    left: 75%;
+    background-color: white;
+    bottom: 0;
+}
+
+.mid img {
+    width: 100%;
+
+}
+
+.secont-contain {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.mid-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    z-index: 99;
+    position: absolute;
+    left: 60%;
+    bottom: 0%;
+}
+
+.mid-text h2 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+
+}
+
+.mid-text p {
+    color: var(--Dark-Gray);
+    font-size: 15px;
+    line-height: 1rem;
+}
+
+.our {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.our h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 35px;
+}
+
+.our button {
+    width: 15%;
+    background-color: inherit;
+    outline: none;
+    border: 1px solid black;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+.our button:hover {
+    background-color: black;
+    color: white;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 60rem;
+    width: 100%;
+    gap: 1rem;
+}
+
+.images p {
+    height: 100%;
+    width: 100%;
+    color: var(--White);
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    font-size: 2.2rem;
+    font-weight: 300;
+    max-width: 18rem;
+}
+
+.para {
+    background-image: url(./images/desktop/image-deep-earth.jpg);
+    background-position: center;
+    background-size: cover;
+    opacity: 1.1;
+    text-shadow: 1px 1px 0 #00000069, -1px 1px 0 #00000096, 1px -1px 0 #00000059, -1px -1px 0 #00000075;
+}
+
+.para:hover {
+    opacity: 0.5;
+    color: var(--Dark-Gray);
+    cursor: pointer;
+}
+
+.night {
+    background-image: url(./images/desktop/image-night-arcade.jpg);
+}
+
+.soccer {
+    background-image: url(./images/desktop/image-soccer-team.jpg);
+}
+
+.grid {
+    background-image: url(./images/desktop/image-grid.jpg);
+}
+
+.above {
+    background-image: url(./images/desktop/image-from-above.jpg);
+}
+
+.pocket {
+    background-image: url(./images/desktop/image-pocket-borealis.jpg);
+}
+
+.cur {
+    background-image: url(./images/desktop/image-curiosity.jpg);
+}
+
+.fish {
+    background-image: url(./images/desktop/image-fisheye.jpg);
+}
+
+footer {
+    background-color: var(--Black);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+
+.contain-foot {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.top-foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 40%;
+}
+
+footer .logo {
+    width: 100%;
+}
+
+.top-foot ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.top-foot ul ol a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+.top-foot ul ol a::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    bottom: -50%;
+    height: 2px;
+    background-color: var(--White);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.top-foot ul ol :hover::after {
+    transform: scaleX(1);
+}
+
+.bottom-foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 40%;
+}
+
+.social {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.img {
+    margin-left: 15px;
+    position: relative !important;
+    cursor: pointer;
+}
+
+.img::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+
+}
+
+.img:hover::after {
+    transform: scaleX(1);
+
+}
+
+.copy {
+    width: 100%;
+    text-align: right;
+}
+
+.bottom-foot p {
+    color: var(--Very-Dark-Gray);
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .top {
+        height: 98vh;
+        gap: 10rem;
+    }
+
+    .nav ul {
+        background-image: url(./images/icon-hamburger.svg);
+        width: 5%;
+        height: 1rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .nav ul ol {
+        display: none;
+    }
+
+    .main {
+        width: 80%;
+    }
+
+    .main h1 {
+        font-size: 3.7rem;
+    }
+
+    .mid {
+        flex-direction: column;
+        width: 100%;
+        gap: 3rem;
+    }
+
+    .mid-img {
+        width: 100%;
+    }
+
+    .mid-img::before {
+        display: none;
+    }
+
+    .mid-text {
+        width: 100%;
+        text-align: center;
+        position: unset;
+    }
+
+    .mid-text p {
+        font-size: 25px;
+        width: 90%;
+        line-height: 1.5;
+    }
+
+    .our {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .our button {
+        display: none;
+    }
+
+    .our h3 {
+        font-size: 3rem;
+    }
+
+    .images {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        height: 100rem;
+        position: relative;
+    }
+
+    .para {
+        background-image: url(./images/mobile/image-deep-earth.jpg);
+        min-width: 100%;
+    }
+
+    .night {
+        background-image: url(./images/mobile/image-night-arcade.jpg);
+    }
+
+    .soccer {
+        background-image: url(./images/mobile/image-soccer-team.jpg);
+    }
+
+    .grid {
+        background-image: url(./images/mobile/image-grid.jpg);
+    }
+
+    .above {
+        background-image: url(./images/mobile/image-from-above.jpg);
+    }
+
+    .pocket {
+        background-image: url(./images/mobile/image-pocket-borealis.jpg);
+    }
+
+    .cur {
+        background-image: url(./images/mobile/image-curiosity.jpg);
+    }
+
+    .fish {
+        background-image: url(./images/mobile/image-fisheye.jpg);
+    }
+
+    .images::before {
+        transform: translate(-50%, -50%);
+        content: "SEE ALL";
+        width: 10rem;
+        height: 2rem;
+        position: absolute;
+        left: 50%;
+        bottom: -5%;
+        font-size: 1rem;
+        border: 1px solid black;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-weight: bold;
+        background-color: white;
+        transition: 0.5s ease;
+    }
+
+    .images:hover::before {
+        background-color: black;
+        color: white;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contain-foot {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .top-foot {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .top-foot ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .bottom-foot {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+
+    }
+
+    .social {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .copy {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+
+@media (max-width: 480px) {
+    body {
+        width: 100%;
+    }
+
+    .main h1 {
+        font-size: 2.9rem;
+    }
+
+    .our h3 {
+        font-size: 2.1rem;
+    }
+}
+
+aside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15rem;
+    background-color: black;
+    padding: 4rem;
+    display: none;
+
+}
+
+.show {
+    display: block;
+}
+
+
+.side-bar-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10rem;
+}
+
+.close {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+}
+
+.close img {
+    width: 150%;
+}
+
+.items ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.items ul ol a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
